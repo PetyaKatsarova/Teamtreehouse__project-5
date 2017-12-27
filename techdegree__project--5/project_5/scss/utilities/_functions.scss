@@ -1,0 +1,18 @@
+// PX INTO EM
+
+@function em($target, $context: $base__font-size) {
+  @return ($target / $context) * 1em;
+}
+
+// MAP COLORS
+
+@function pallete($shade){
+    @return map-get($pallettes,$shade);
+}
+
+
+// GRID MAGIC WITH COLORS
+
+
+
+

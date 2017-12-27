@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+ul {
+     @extend %center-align;
+     @include layout($mrg-top:em(20px),$mrg-bottom: em(90px));     
+     list-style-type: none;
+     padding-left: 0;
+    }
+
+p {
+    line-height: em(20px);
+    @include layout($mrg-top:em(5px), $mrg-bottom: em(26px),$line-h: 22px);
+}
+

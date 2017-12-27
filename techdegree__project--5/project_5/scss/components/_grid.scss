@@ -1,0 +1,117 @@
+// use flexbox
+  /*Grid:
+    .container  body
+    .grid__row    
+    .grid__col--2
+    .grid__col--3
+    .grid__col--4
+    .grid__col--5
+    .grid__col--6
+    .grid__col--7
+    .grid__col--8  theme__colors
+    .grid__col--9
+    .grid__col--10
+    .grid__col--11
+    .grid__col--12
+    .centered
+    .theme__colors 
+
+Components
+All your styles for this project will be applied using the classes listed in the comment at the top of the index.html file. You’ll style these classes in the components folder. Try not to combine selectors from two different categories. For example, avoid using .grid__col--8 .link to style the link in the typography section, as it makes the style of links dependent on what grid column they’re in. The best way to organize this is to make a file in the components folder for each of the following:
+Grid (recommend using flexbox)
+Typography
+Navigation
+Images
+Buttons
+Forms
+
+
+ <h4 id="grid" class="headline--secondary">Grid System</h4>
+
+  <div class="grid__row">
+    <div class="grid__col--12 theme__colors">.grid__col--12</div>
+  </div>
+  <div class="grid__row">
+    <div class="grid__col--6 theme__colors">.grid__col--6</div>
+    <div class="grid__col--6 theme__colors">.grid__col--6</div>
+  </div>
+  <div class="grid__row">
+    <div class="grid__col--4 theme__colors">.grid__col--4</div>
+    <div class="grid__col--4 theme__colors">.grid__col--4</div>
+    <div class="grid__col--4 theme__colors">.grid__col--4</div>
+  </div>
+  <div class="grid__row">
+    <div class="grid__col--3 theme__colors">.grid__col--3</div>
+    <div class="grid__col--3 theme__colors">.grid__col--3</div>
+    <div class="grid__col--3 theme__colors">.grid__col--3</div>
+    <div class="grid__col--3 theme__colors">.grid__col--3</div>
+  </div>
+  <div class="grid__row">
+    <div class="grid__col--5 theme__colors">.grid__col--5</div>
+    <div class="grid__col--7 theme__colors">.grid__col--7</div>
+  </div>
+  <div class="grid__row">
+    <div class="grid__col--8 theme__colors">.grid__col--8</div>
+    <div class="grid__col--4 theme__colors">.grid__col--4</div>
+  </div>
+  <div class="grid__row">
+    <div class="grid__col--7 theme__colors centered">.centered .grid__col--7</div>
+  </div>
+
+<div class="grid__row">
+    <div class="grid__col--12 theme__colors">.grid__col--12</div>
+  </div>
+  <div class="grid__row">
+
+*/
+ 
+ 
+ .grid__row > .theme__colors {
+     @include layout($mrg-top: 6px, $mrg-bottom: 6px);
+     text-transform: lowercase;
+}
+ 
+.grid__row {
+    @include layout($mrg-top: 37px, $mrg-bottom: 37px);
+}
+  
+.theme__colors.grid{
+  &__col{
+      @include btn-colors ($grid-colors);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

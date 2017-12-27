@@ -1,0 +1,26 @@
+/* Image:
+    .img--logo
+    .img--frame
+    .img--avatar
+*/
+
+.img{
+     @include m(logo) {
+       @extend %margin;
+         }
+    
+     @include m(avatar){
+        @extend %margin;
+        width: em(160px);
+    }
+    
+     @include m(frame){
+        @extend %margin;
+        border: 1px solid $dimGray--lighter;
+        padding: em(12px);
+        width: 310px; 
+        margin-bottom: 20px;
+        }
+}
+
+

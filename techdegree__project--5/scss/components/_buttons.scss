@@ -1,0 +1,36 @@
+/* Buttons:
+    .btn--default
+    .btn--success
+    .btn--error
+    .btn--warning
+    .btn--info
+    .theme__colors*/
+
+
+.btn {
+    @include btn-colors ($background-colors){
+        @include flexy ($dir: column);
+        width: 100%;  
+        
+        @include mq(small){
+            width: 15%;        
+       }
+    }
+   
+}
+.btn--default:last-child {
+    @include mq(small){
+        width: 100%;
+    }
+}
+.theme__colors {
+    @include style-btns;
+}
+
+
+.btn--default {
+    color: $white;
+   }
+
+
+

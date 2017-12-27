@@ -1,0 +1,124 @@
+// use flexbox
+  /*Grid:
+    .container  body
+    .grid__row    
+    .grid__col--2
+    .grid__col--3
+    .grid__col--4
+    .grid__col--5
+    .grid__col--6
+    .grid__col--7
+    .grid__col--8  theme__colors
+    .grid__col--9
+    .grid__col--10
+    .grid__col--11
+    .grid__col--12
+    .centered
+    .theme__colors 
+*/
+
+
+ 
+  .grid__row >.theme__colors {
+     @include layout($mrg-top: 6px, $mrg-bottom: 6px);
+     text-transform: lowercase;
+}
+ 
+.grid__row {
+    @include layout($mrg-top: 37px, $mrg-bottom: 37px);
+    @include mq(small) {
+    @include flexy ($disp: flex, $wrap: wrap, $dir: row, $just: space-around);
+    @include layout($mrg-top: 25px, $mrg-bottom: 25px);
+    }
+}
+  
+// GRID COLORS
+
+.theme__colors.grid{
+    &__col{
+      @include btn-colors ($grid-colors);
+    }
+}
+
+
+// STYLING THE BUTTONS
+
+.grid__col--12 {
+    &:first-child {
+        padding-top: 10px;
+    }
+    @include mq(small) {
+        @include flexy($dir: row, $just: space-around);    
+    }
+}
+.grid__col--12 > .theme__colors {
+    color: $white;
+}
+
+
+// MED  QUERY: grid col different sizes
+
+.grid__col {
+    @include mq(small) {
+      @include grid-columns;
+    }
+}
+    
+.centered {
+    @include mq(small){
+        margin: auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

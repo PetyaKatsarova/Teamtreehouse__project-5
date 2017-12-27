@@ -1,0 +1,57 @@
+// .nav__item USE ONLY is ul li of navigation  .nav is ul, .navigation is navigation
+
+ /*<div class="grid__row">
+    <div class="grid__col--3">
+      <a class="link" href="/">
+          <img class="img--logo" alt="circles logo" src="images/logo.png">
+        </a>
+    </div>
+    <div class="grid__col--9">
+      <nav role="navigation">
+        <ul class="nav">
+          <li class="nav__item"><a href="#type">Typography</a></li>
+          <li class="nav__item"><a href="#buttons">Buttons</a></li>
+          <li class="nav__item"><a href="#forms">Form</a></li>
+          <li class="nav__item"><a href="#images">Images</a></li>
+          <li class="nav__item"><a href="#grid">Grid</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>*/ 
+.nav__item {
+    width:          100%;
+    padding-top:    em(12px);
+    padding-bottom: em(12px);
+    border-radius:  em(10px);
+    margin-left: 20px;
+    margin-right: 20px;
+    
+        &:hover{
+          background: $DarkTurquoise;
+     
+        }
+    }
+
+.container {
+    @media (min-width: 700px){
+        margin-left: em(60px);
+        margin-right: em(60px);
+            }
+}
+.nav {
+    @media (min-width: 700px){
+        float: right;
+        display: inline-flex;
+        margin-right: 50px;
+        
+       
+        }
+}
+.link {
+    @media (min-width: 700px){
+    float: left;
+    }
+}
+.grid__row {
+    @include clearfix;
+}

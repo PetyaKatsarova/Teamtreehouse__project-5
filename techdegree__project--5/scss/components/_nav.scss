@@ -1,0 +1,27 @@
+ //Navigation:
+   // .nav__item
+//.nav = ul
+
+
+.nav__item {
+    padding: em(12px) em(10px);
+    width:          100%;
+    border-radius:  em(10px);
+    @extend %margin;
+    @include mq(small){
+        display: inline-block;
+        width: 13%;
+    }
+    
+    &:hover{
+         background: $DarkTurquoise;
+        } 
+}
+
+
+  ul {
+      @include mq(small){
+       @include flexy($dir: row, $just: flex-end);
+         
+      }
+ }

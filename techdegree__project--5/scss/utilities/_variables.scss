@@ -1,0 +1,80 @@
+// var for fonts, colors, breakpoints
+
+$font-family--primary:    'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family--secondary:  'Open Sans', sans-serif;              //'Bree Serif', Helvetica, Arial, serif;
+
+// FONT WEIGHTS
+
+$font-weight--light: 200;
+$font-weight--medium: 400;
+$font-weight--bold: 700;
+
+// DESCRIPTIVE BASE COLORS
+
+$dimGray:   #696969;
+$DarkBlue: #000033;
+$DarkTurquoise: #00CED1;
+$lightGreen: #90EE90;
+$lightCoral: #F08080;
+$lightSalmon: #FFA07A;
+$mediumPurple: #9370DB;
+$white: #FFF8DC;
+
+
+
+// COLOR USAGE
+
+$text-color:   $dimGray;
+$dimGray--light: lighten($dimGray, 25%);
+$dimGray--lighter: lighten($dimGray, 50%);
+$dimGray-darker: darken($dimGray, 30%);
+$cirlces-color: $DarkBlue;
+$theme-color:   $DarkTurquoise;
+$btn-text-color: $white;
+
+
+// COLOR MAP FOR THE BUTTONS
+
+$background-colors: (
+    default: $DarkTurquoise,
+    success: $lightGreen,
+    error:   $lightCoral,
+    warning: $lightSalmon,
+    info:    $mediumPurple,
+);
+
+// COLOR MAP FOR THE GRID
+
+$grid-colors: (
+   12: #00e6ac,
+   6:  #8080ff,
+   4:  #1affff, 
+   3:  #e6b3ff,
+   5:  #00cc66,
+   7:  #ff99cc,
+   8:  #ff3333,
+);
+
+  
+ 
+// BREAKPOINT
+    
+$breakpoint-sm  : 769px;
+
+// Text
+
+$base__font-size : 14px;
+$base__line      : 24px;
+$letter-space    : 1px;
+
+
+
+//  GRID
+
+$grid-col-width: 65px;
+$grid-col-count: 12;
+$grid-gutter-width: 20px;
+$grid-cont-max-w: 1050px;
+
+
+

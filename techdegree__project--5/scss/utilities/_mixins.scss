@@ -1,0 +1,118 @@
+/*Media Queries
+Flexbox settings
+Element and Modifier BEM Selectors*/
+
+// BEM SELECTOR
+
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+   // BUTTON COLORS
+
+@mixin btn-colors ($map){
+    @each $theme,$color in $map{
+        &--#{$theme}{
+            background-color: $color;      
+            @content;
+        }
+    }
+}
+
+// GRID COL SIZES
+
+@mixin grid-columns {
+   @for $i from 1 through $grid-col-count {
+            $context: grid-context($grid-col-width, $grid-col-count, $grid-gutter-width);
+            $target: ($grid-col-width * $i) + ($grid-gutter-width *($i - 1));
+            &--#{$i} {
+                width: percentage($target / $context);
+            }           
+    }
+}
+
+
+// FLEXBOX
+
+@mixin flexy ($disp: flex, $wrap: wrap, $dir: null,$just: null){
+   display: $disp;
+   flex-wrap: $wrap;
+   flex-direction: $dir;
+   justify-content: $just; 
+   @content;
+}
+// STYLE LAYOUT
+
+@mixin layout($mrg-top: null, $mrg-bottom: null,$font-s: null,$font-w: null, $pad-left: null,$pad-right: null, $line-h: null, $pad-top: null, $pad-bottom: null){
+    margin-top: $mrg-top;
+    margin-bottom: $mrg-bottom;
+    padding-left: $pad-left;
+    padding-right: $pad-right;
+    padding-top: $pad-top;
+    padding-bottom: $pad-bottom;
+    font-size: $font-s;
+    font-weight: $font-w;
+    line-height: $line-h;
+    }
+
+// STYLE BUTTONS
+
+@mixin style-btns{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 17px;
+    margin-bottom: 17px;
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+    @content;
+}
+  
+   // MEDIA QUERIES
+
+@mixin mq($break) {
+    @if $break=="small"{
+        @media (min-width: $breakpoint-sm){
+            @content;
+        }
+    }
+    @else {
+        @error "Whoops! No valid value for the breakpoint."
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

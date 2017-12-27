@@ -1,0 +1,22 @@
+ /* Forms:
+    .form
+    .form__label--hidden
+    .form__input
+
+*/
+
+.form {
+    @include flexy($dir: column);
+    margin-bottom: 10px;
+    
+    &__label--hidden {
+        display: none;
+    }
+}
+.form__input {
+    border: none;
+    @include layout($mrg-top: 6px, $mrg-bottom: 7px, $pad-top: 15px, $pad-bottom: 15px);
+    border-bottom: 5px solid $DarkTurquoise;
+    
+}
+

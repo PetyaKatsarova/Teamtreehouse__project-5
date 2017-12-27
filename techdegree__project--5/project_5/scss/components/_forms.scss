@@ -1,0 +1,37 @@
+ /* Forms:
+    .form
+    .form__label--hidden
+    .form__input
+
+ <div class="grid__col--4">
+      <form class="form">
+        <legend id="forms" class="headline--secondary">Form Elements</legend>
+        <img class="img--avatar" src="images/avatar.png" alt="Avatar">
+        <label class="form__label--hidden" for="username">Username:</label>
+        <input class="form__input" type="text" id="username" placeholder="Username">
+        <label class="form__label--hidden" for="password">Password:</label>
+        <input class="form__input" type="password" id="password" placeholder="Password">
+        <button class="btn--default theme__colors" type="submit" value="Login">Login</button>
+      </form>
+    </div>
+  </div>
+
+
+*/
+
+.form {
+    @include flexy($dir: column);
+    margin-bottom: 10px;
+    
+    &__label--hidden {
+        display: none;
+    }
+}
+.form__input {
+    border: none;
+    @include layout($mrg-top: 6px, $mrg-bottom: 7px, $pad-top: 15px, $pad-bottom: 15px);
+    border-bottom: 5px solid $DarkTurquoise;
+    
+}
+
+//@mixin layout($mrg-top: null, $mrg-bottom: null,$font-s: null,$font-w: null, $padding-left: null, $line-h: null)

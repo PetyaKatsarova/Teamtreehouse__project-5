@@ -1,0 +1,67 @@
+/* Image:
+    .img--logo
+    .img--frame
+    .img--avatar
+*/
+
+.img{
+   @include m(logo) {
+       @extend %margin;
+    }
+    
+    @include m(avatar){
+        @extend %margin;
+        width: em(160px);
+    }
+    
+     @include m(frame){
+        border: 1px solid $dimGray--lighter;
+        padding: em(12px);
+        width: 310px; 
+        margin-bottom: 20px;
+       // @extend %margin;
+    }
+}
+
+/* <form class="form">
+        <legend id="forms" class="headline--secondary">Form Elements</legend>
+        <img class="img--avatar" src="images/avatar.png" alt="Avatar">
+        <label class="form__label--hidden" for="username">Username:</label>
+        <input class="form__input" type="text" id="username" placeholder="Username">
+        <label class="form__label--hidden" for="password">Password:</label>
+        <input class="form__input" type="password" id="password" placeholder="Password">
+        <button class="btn--default theme__colors" type="submit" value="Login">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <h4 id="images" class="headline--secondary">Images</h4>
+
+  <div class="grid__row">
+    <div class="grid__col--6">
+      <img class="img--frame" src="images/image.png" alt="sample image">
+    </div>
+    <div class="grid__col--6">
+      <img class="img--avatar" src="images/avatar.png" alt="Avatar">
+    </div>
+  </div> */
+/*.img {
+	@include m(wrap) {
+		border: 1px solid palette(grey, x-light);
+		padding: em(12px);
+	}
+	@include m(avatar) {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: $br--round;
+		@include mq(medium) {
+			margin-top: em(24px);
+		}
+	}
+	@include m(hero) {
+		@include mq(medium) {
+			margin-bottom: em(42px);
+		}
+	}
+}*/

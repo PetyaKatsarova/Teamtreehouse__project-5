@@ -1,0 +1,34 @@
+/*Typography:
+    .container =  body
+    .link =  a img-logo
+    .blockquote
+    .headline--primary = h1
+    .headline--secondary = legend 'FORM ELEMENTS'
+
+*/
+
+
+.container {
+    @extend %style-cont; 
+    }
+
+.headline {
+    &--primary {
+      color: $theme-color;
+      @include layout($font-s: em(25px), $mrg-bottom: 32px, $pad-left: 20px);
+    }
+    &--secondary {
+      color: lighten($dimGray, 30%);
+      @include layout($mrg-top: 30px, $mrg-bottom: 20px, $font-w: 200);
+     }
+}
+
+.link {
+    text-decoration: none;
+    color:           $theme-color;
+}
+
+.blockquote {
+   @extend %style-blockq;
+   }
+

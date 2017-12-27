@@ -1,0 +1,12 @@
+// PX INTO EM
+
+@function em($target, $context: $base__font-size) {
+  @return ($target / $context) * 1em;
+}
+
+// GRID - Set the context width
+
+@function grid-context($grid-column-width, $grid-column-count, $grid-gutter-width){
+  $grid-context: ($grid-column-width * $grid-column-count) + ($grid-gutter-width * ($grid-column-count - 1));
+  @return $grid-context;
+}

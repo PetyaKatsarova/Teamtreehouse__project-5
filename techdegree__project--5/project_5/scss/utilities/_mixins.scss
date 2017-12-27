@@ -1,0 +1,73 @@
+/*Media Queries
+Flexbox settings
+Element and Modifier BEM Selectors*/
+
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+@mixin btn-colors ($map){
+    @each $theme,$color in $map{
+        &--#{$theme}{
+            background-color: $color;      
+        }
+    }
+}
+
+// grid colors
+
+
+
+// remove unwanted colors???
+     
+@mixin clearfix {
+    content: "";
+    display: tabel;
+    clear: both;
+}
+
+@mixin style-btns{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+    @content;
+}
+
+// FLEXBOX
+@mixin flexy ($disp: flex, $wrap: null, $dir: null,$just: null){
+   display: $disp;
+   flex-wrap: $wrap;
+   flex-direction: $dir;
+   justify-content: $just; 
+   @content;
+}
+// layout
+
+@mixin layout($mrg-top: null, $mrg-bottom: null,$font-s: null,$font-w: null, $pad-left: null, $line-h: null, $pad-top: null, $pad-bottom: null){
+    margin-top: $mrg-top;
+    margin-bottom: $mrg-bottom;
+    padding-left: $pad-left;
+    padding-top: $pad-top;
+    padding-bottom: $pad-bottom;
+    font-size: $font-s;
+    font-weight: $font-w;
+    line-height: $line-h;
+    }
+
+
+  
+
+
+   /* $palettes: (
+      base: $dimGray,
+      dark: darken($dimGray, 30%),
+      light: lighten($dimGray, 25%),
+      x-light: lighten($dimGray, 50%), 
+    );*/
+  
